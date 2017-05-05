@@ -8,6 +8,14 @@ class ParamsExamplesController < ApplicationController
     @message = params["this_is_a_key"]
   end
 
+  def form_show
+
+  end
+
+  def form_send
+    @message = params["form_message"]
+  end
+
 
 
 
@@ -30,7 +38,7 @@ class ParamsExamplesController < ApplicationController
 
     def guess
       @user_guess = params["submission"].to_i
-      winning number = 42
+      winning_number = 42
 
       if winning_number < @user_guess
         @answer_message = "too high."
